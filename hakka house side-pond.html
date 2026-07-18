@@ -2243,6 +2243,11 @@
       display: inline-block; 
    }
 
+   .ui-label-card{
+      box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+   }
+
    </style>
 </head>
 <body>
@@ -2369,6 +2374,29 @@
       <div class="bubble-l-pipe" style="--size: 10px; --delay: 15s; --left: 57%;"></div>
    </div>
 
+
+   <!-- 2026-07-18: -->
+   <span onclick="showDialogCard('dialog_EvaporationFloat')" style="position: absolute; left: 500px; top: 750px; font-family: sans-serif; color: orangered; cursor: pointer;" class="ui-label-card">
+      solar (tàiyáng 太阳)<br>evaporation float
+   </span>
+
+   <dialog id="dialog_EvaporationFloat" title="evaporation float" style="font-family: sans-serif; font-size: 18px; width: 700px;">
+      This float🛶 helps optimize solar🌞 evaporation by evaporating only the surface layer of the water of the solar still ! It helps insulate the bulk water💧 below and reducing the water thickness to be heated.<br>
+
+      <ul>
+         <li><b>Top layer : </b>A hydrophobic, porous layer allows water vapour to escape efficiently while heat loss is minimized</li>
+         <br>
+         <li><b>Bottom layer : </b>A hydrophillic, porous material pulls water up, ensuing a constant, thin supply of salt water🧂🌊 to the hot upper layer</li>
+         <br>
+         <li><b>Effect : </b>Salt ions are forced to remain in the bulk water or precipitate only on the edges, rather than blocking the porous structure.</li>
+      </ul>
+      
+      This allows the water to evaporate faster!
+
+      <br><br>
+      <button onclick="closeDialog(event)">x</button>
+   </dialog>
+
    <!-- 2026-06-18: added -->
    <div class="ground-level"></div>
    <div class="recharge-pit-container" style="--splash-pad: 20px; --sand3-pct: 40%; --gravel-pct: 30%; --pebble-pct: 35%;">
@@ -2403,7 +2431,7 @@
 
 
    <!-- 2026-07-07: need to put link here due to arch-container div overlapping preventing click -->
-   <span onclick="openYoutubeShortPopup('https://www.youtube.com/shorts/VFbbizL5tTQ')" style="position: absolute; left: 400px; top: 300px; font-family: sans-serif; color: orangered; cursor: pointer; z-index: 5;" class="ui-label-card">
+   <span onclick="openYoutubeShortPopup('https://www.youtube.com/shorts/VFbbizL5tTQ')" style="position: absolute; left: 400px; top: 280px; font-family: sans-serif; color: orangered; cursor: pointer; z-index: 5;" class="ui-label-card">
       Futian High-Speed Railway Station<br>(Fútián gāotiě zhàn<br>福田高铁站)
    </span>
 
@@ -2434,7 +2462,7 @@
    <div class="side-roof-solar-panel panel2"></div>
    <div class="side-roof-solar-panel panel3"></div>
 
-   <span style="position: absolute; left: 120px; top: 360px; font-family: sans-serif; color: orangered; cursor: pointer; z-index: 5;" class="ui-label-card">
+   <span style="position: absolute; left: 120px; top: 345px; font-family: sans-serif; color: orangered; cursor: pointer; z-index: 5;" class="ui-label-card">
    fruit (shuǐguǒ 水果) /<br>vegetable (shūcài 蔬菜)<br>electrolysis cell
    </span>
 
@@ -2537,7 +2565,7 @@
       </div>
       <div class="random-seed-generator-base"></div>
 
-      <span onclick="showRandomSeedGeneratorInfo()" style="position: absolute; left: 10px; top: 570px; font-family: sans-serif; color: orangered; cursor: pointer; z-index: 5;" class="ui-label-card">
+      <span onclick="showDialogCard('dialog_RandomSeedGenerator')" style="position: absolute; left: 10px; top: 570px; font-family: sans-serif; color: orangered; cursor: pointer; z-index: 5;" class="ui-label-card">
          random seed<br>(zhǒngzǐ 种子)<br>generator
       </span>
 

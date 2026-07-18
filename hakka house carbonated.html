@@ -1295,6 +1295,7 @@
          justify-content: center;
          align-items: center;
          text-align: center;
+         cursor: pointer;
       }
       .road-chinese-text {
          font-size: 18px;
@@ -1356,6 +1357,10 @@
       }
 
 
+   .ui-label-card{
+      box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+      border-radius: 5px;
+   }
 
 
    </style>
@@ -1363,30 +1368,6 @@
 <body>
 
    <div class="carbonated-ground-level"></div>
-
-   <!-- 2026-07-16: -->
-   <!-- Top Sign (Arrow Left) -->
-   <div class="road-sign sign-top">
-      <div class="road-arrow-container">
-         <div class="road-arrow arrow-left"></div>
-      </div>
-      <div class="road-text-container">
-         <div class="road-chinese-text">福田红树林<br>生态公园🌿</div>
-         <div class="road-english-text">Futian Mangrove Ecological Park</div>
-      </div>
-   </div>
-
-   <!-- Bottom Sign (Arrow Right) -->
-   <div class="road-sign sign-bottom">
-      <div class="road-arrow-container">
-         <div class="road-arrow arrow-right"></div>
-      </div>
-      <div class="road-text-container">
-         <div class="road-chinese-text">福田深圳市民中心</div>
-         <div class="road-english-text">Futian Shenzhen Civic Center</div>
-      </div>
-   </div>
-
 
 
    <div class="speech-bubble-intro">
@@ -1493,6 +1474,12 @@
 
    <div class="front-left-wall">
 
+
+      <!-- 2026-07-18: -->
+      <span onclick="openYoutubeShortPopup('https://www.youtube.com/shorts/pxNVgnl1B0k')" style="position: absolute; left: 520px; top: 120px;  font-family: sans-serif; color: orangered; cursor: pointer;" class="ui-label-card">
+      hydroponic<br>(水耕法 shuǐ gēng fǎ)<br>vertical farm
+      </span>
+
       <div class="recessed-square-wall">
 
          <div class="railing-container">
@@ -1541,6 +1528,30 @@
 
    <div class="small-brick-wall">
       <img src="images/water-bottle-flat.png" style="position:absolute; width:100px; left: -15px; top: -100px; z-index: 1;">
+
+      <!-- 2026-07-18: gemini for desccription -->
+      <span onclick="showDialogCard('dialog_CarbonatedWater')" style="position: absolute; left: 50px; top: 10px; font-family: sans-serif; color: orangered; cursor: pointer; z-index: 5;" class="ui-label-card">
+         carbonated water<br>(tànsuān shuǐ 碳酸水)
+      </span>
+
+      <dialog id="dialog_CarbonatedWater" style="font-family: sans-serif; font-size: 18px; width: 700px;">
+
+          <h3>How is carbonated water💨💧 produced?</h3>
+          
+          Factories make fizzy water by chilling it and pumping in carbon dioxide gas under high pressure. Sealing the bottle traps the gas inside the liquid.<br><br>
+
+          While sealed, some gas💨 dissolve with the water💧 to create a mild acid called carbonic acid💨💧 : CO2+H2O⇌H2CO3CO. This safe acid gives the drink its sharp, tangy taste😋!<br><br>
+
+          Opening the cap instantly drops the pressure inside the bottle. This breaks the chemical balance and causes a reaction called effervescence.<br><br>
+
+          The acid turns back into carbon dioxide gas and rushes out as the 🫧bubbles🫧 you see rising. Because the gas inside the bubbles is much lighter and less dense than water, they quickly float up⬆️ to the surface!
+
+         <a href=""></a>
+         <br><br>
+         <button onclick="closeDialog(event)">x</button>
+      </dialog>
+
+
    </div>
    <img src="images/calabash-drink.png" style="position:absolute; width:110px; left: 900px; top: 800px; z-index: 2;">
    <span style="position:absolute; left: 928px; top: 865px; z-index: 2; font-family: sans-serif; font-size: 22px; color: brown;">大福</span>
@@ -1598,14 +1609,41 @@
    </div>
 
    
-   <img src="images/rice-grain.png" style="position:absolute; width:65px; left: 1180px; top: 770px; transform: scaleX(-1); z-index: 1;">
-   <div style="position:absolute; width:65px; left: 1180px; top: 740px; font-family: sans-serif; font-size: 14px;">bag of rice</div>
-   <img src="images/carrot.png" style="position:absolute; width:55px; left: 1120px; top: 795px; transform: rotate(40deg); z-index: -1;">
+   <!-- 2206-07-16: -->
+   <img src="images/rice-grain.png" style="position:absolute; width:65px; left: 1200px; top: 140px; transform: scaleX(1); z-index: 1;">
+   <img src="images/rice-grain.png" style="position:absolute; width:72px; left: 1250px; top: 163px; transform: scaleX(1); z-index: 1;">
+   <img src="images/rice-grain.png" style="position:absolute; width:68px; left: 1240px; top: 160px; transform: scaleX(1); z-index: 1;">
+   <img src="images/carrot.png" style="position:absolute; width:55px; left: 1180px; top: 795px; transform: rotate(40deg); z-index: -1;">
 
 
    <img src="images/transparent-small-roof.png" style="position: absolute; width: 580px; height: 70px; top: 380px; left: 1080px; z-index: -2;">
    <div class="right-side-wall">
       <div class="roof-beam"></div>
+   </div>
+
+
+   <!-- 2026-07-16: -->
+   <!-- Top Sign (Arrow Left) -->
+   <div class="road-sign sign-top">
+      <div class="road-arrow-container">
+         <div class="road-arrow arrow-left"></div>
+      </div>
+      <div class="road-text-container" onclick="openYoutubeShortPopup('https://www.youtube.com/shorts/nPxpM62oMRo')">
+         <div class="road-chinese-text">福田红树林<br>生态公园🌿</div>
+         <div class="road-english-text">Futian Mangrove Ecological Park</div>
+      </div>
+   </div>
+
+
+   <!-- Bottom Sign (Arrow Right) -->
+   <div class="road-sign sign-bottom">
+      <div class="road-arrow-container">
+         <div class="road-arrow arrow-right"></div>
+      </div>
+      <div class="road-text-container" onclick="openYoutubeShortPopup('https://www.youtube.com/shorts/koHxvHACRMo')">
+         <div class="road-chinese-text">福田深圳市民中心</div>
+         <div class="road-english-text">Futian Shenzhen Civic Center</div>
+      </div>
    </div>
 
     

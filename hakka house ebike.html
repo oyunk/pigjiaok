@@ -1824,7 +1824,7 @@
 
 <!-- @@@@@@ 2026-04-08: this is duplicated element on UI b/c the many layers on UI make clicking on the pig scroll not possible -->
 <div style="border: 2px solid black; font-size: 40px; font-family: sans-serif; cursor: pointer;">
-   <span onclick="showPigPoem()" style="color: springgreen;">
+   <span onclick="showDialogCard('dialog_PigPoem')" style="color: springgreen;">
       《安猪曲》
    </span>
 
@@ -1999,6 +1999,10 @@
             <span>💨°C</span>
          </div>
 
+         <!-- 2026-07-18: -->
+         <span onclick="openYoutubeShortPopup('https://www.youtube.com/shorts/4pBrOi0oj6I')" style="position: absolute; left: 300px; top: 550px; font-family: sans-serif; color: orangered; cursor: pointer; z-index: 5;" class="ui-label-card">
+         aeroponics<br>(气耕 qì gēng)<br>vertical farm
+         </span>
 
 
          <!-- 2025-05-15: added, updated 2026-06-06 -->
@@ -2086,8 +2090,9 @@
 
 
          <!-- @@@@@@@@@@@  B u t t o n !! @@@@@@@@@@@@@@ -->
+          <!-- // 2026-04-08: -->
          <div class="shrine-tablet">
-            <button onclick="showPigScroll()" style="border: none; background-color: orange; ">
+            <button onclick="showDialogCard('dialog_PigHistory')" style="border: none; background-color: orange; ">
                <span style="font-size: 40px; cursor: pointer;">豬<br> 
                家</span><br>
                <span style="font-size: 15px;">-亙古-</span>
@@ -2102,7 +2107,8 @@
 
 
       <!-- //@@@@@@@@@@@@@@@@@@ 2026-06-06: START: put button here due to overlapping elements preventing click @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
-      <span onclick="showSodiumIonBatteryInfo()" style="position: absolute; left: 850px; top: 780px; font-family: sans-serif; color: orangered; cursor: pointer; background: none; padding: 0;" class="ui-label-card">
+       <!-- // 2026-06-06 -->
+      <span onclick="showDialogCard('dialog_SodiumIonBattery')" style="position: absolute; left: 850px; top: 780px; font-family: sans-serif; color: orangered; cursor: pointer; background: none; padding: 0;" class="ui-label-card">
          Sodium ion (Na+) battery🔋<br>(钠离子电池 Nà lízǐ diànchi)
       </span>
 
@@ -2128,7 +2134,7 @@
       </dialog>
 
       <!-- solar panel battery BTN -->
-      <button onclick="showSolarPanelBatteryCard()" style="border: none; cursor: pointer; background: none; padding: 0;">
+      <button onclick="showDialogCard('dialog_SolarPanelBattery')" style="border: none; cursor: pointer; background: none; padding: 0;">
          <div class="ebike-roof-overlay-solar-panel-battery" style="text-align: left;">
             <span style="font-size: 10px;">DC<br></span>+&nbsp;-&nbsp;<br>
             <span style="font-size: 12px; color: white; margin-left: 10px;">24V</span><br>
@@ -2144,7 +2150,7 @@
       </dialog>
 
       <!-- charge controller  BTN -->
-      <button onclick="showChargeControllerCard()" style="border: none; cursor: pointer; background: none; padding: 0;">
+      <button onclick="showDialogCard('dialog_ChargeController')" style="border: none; cursor: pointer; background: none; padding: 0;">
          <div class="ebike-station-charge-controller">
             <span>+&nbsp;-&nbsp;</span><span style="font-size: 10px;">DC</span><br>
          </div>
@@ -2160,7 +2166,7 @@
 
 
       <!-- charge inverter  BTN -->
-      <button onclick="showInverterCard()" style="border: none; cursor: pointer; background: none; padding: 0;">
+      <button onclick="showDialogCard('dialog_Inverter')" style="border: none; cursor: pointer; background: none; padding: 0;">
          <div class="ebike-station-charge-inverter" style="padding: 0; line-height: 1;">
             +&nbsp;-&nbsp; <span style="font-size: 10px;">DC</span>
             <span style="font-size: 10px; display: inline-block; text-align: right;">AC outlet</span>
@@ -2176,7 +2182,7 @@
       </dialog>
 
       <!-- ebike station charger (wall outlet)  BTN -->
-      <button onclick="showEbikeStationChargerCard()" style="border: none; cursor: pointer; background: none; padding: 0;">
+      <button onclick="showDialogCard('dialog_EbikeStationCharger')" style="border: none; cursor: pointer; background: none; padding: 0;">
          <div class="ebike-station-charger" style="padding: 0; line-height: 1; font-weight: bold;">
             +&nbsp;-&nbsp;<span style="font-size: 10px;">AC</span>
          </div>

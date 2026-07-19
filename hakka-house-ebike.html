@@ -59,21 +59,27 @@
    .house-outer-wall-floor-lower-RIGHT-wall-ROOF{
       position: absolute;
       height: 220px;
-      margin-left: 1150px;
-      margin-top: -220px;
-      z-index: -10;
-      /* transform: perspective(800px) rotateX(-10deg); */
+      width: 200px;
+      left: 1155px;
+      top: 460px;
+      z-index: 1;
+      transform: rotateX(-50deg);
+
    }
 
+   /* 2026-07-19: updated */
    .house-outer-wall-floor-lower-RIGHT-wall{
       position: absolute;
-      width: 400px;
-      height: 755px;
-      margin-left: 1200px;
-      margin-top: -185px;
+      /* width: 400px; */
+      width: 150px;
+      height: 750px;
+      left: 1205px;
+      top: 455px;
       background-color: gainsboro;
+      z-index: 2;
       /* Points: Top-Left, Top-Right, Bottom-Right, Bottom-Left */
-      clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 75%);
+      /* clip-path: polygon(0% 25%, 100% 0%, 100% 100%, 0% 75%); */
+      clip-path: polygon(0% 25%, 100% 15%, 100% 85%, 0% 75%);
    }
 
 
@@ -106,8 +112,8 @@
    .courtyard-outline{
       position: relative;
       border: 2px solid lightslategray;
-      width: 90%;
-      height: 150px;
+      width: 1300px;
+      height: 80px;
       z-index: -100;
    }
 
@@ -258,7 +264,7 @@
    margin-left: -20px;
    width: 550px; 
    height: 220px;
-   z-index: 20;
+   z-index: 1;
 }
 
 .ebike-station-container-roof{
@@ -911,14 +917,14 @@
 /* 2026-03-24 */
 
 .ebike-station-container{
-   position: relative;
-   margin-left: 10px;
-   margin-top: -85px;
+   position: absolute;
+   left: 800px;
+   top: 550px;
    border: 3px solid lightskyblue;
    width: 400px;
    height: 460px;
    background-color: white;
-   z-index: -10;
+   z-index: -1;
 }
 
 /* 3 holes in wall */
@@ -1830,7 +1836,7 @@
 
 
    <!-- @@@@@@ 2026-04-08: this is duplicated element on UI b/c the many layers on UI make clicking on the pig scroll not possible -->
-   <div style="border: 2px solid black; font-size: 40px; font-family: sans-serif; cursor: pointer;">
+   <div style="border: 2px solid black; font-size: 40px; font-family: sans-serif; cursor: pointer; width: 90%; position: fixed; z-index: 20;">
       <span onclick="showDialogCard('dialog_PigPoem')" style="color: springgreen;">
          《安猪曲》
       </span>
@@ -2115,7 +2121,7 @@
 
       <!-- //@@@@@@@@@@@@@@@@@@ 2026-06-06: START: put button here due to overlapping elements preventing click @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
        <!-- // 2026-06-06 -->
-      <span onclick="showDialogCard('dialog_SodiumIonBattery')" style="position: absolute; left: 850px; top: 780px; font-family: sans-serif; color: orangered; cursor: pointer; background: none; padding: 0;" class="ui-label-card">
+      <span onclick="showDialogCard('dialog_SodiumIonBattery')" style="position: absolute; left: 850px; top: 780px; font-family: sans-serif; color: orangered; cursor: pointer; background: none; width: 210px;" class="ui-label-card">
          Sodium ion (Na+) battery🔋<br>(钠离子电池 Nà lízǐ diànchi)
       </span>
 
@@ -2157,7 +2163,7 @@
       </dialog>
 
       <!-- charge controller  BTN -->
-      <button onclick="showDialogCard('dialog_ChargeController')" style="border: none; cursor: pointer; background: none; padding: 0;">
+      <button onclick="showDialogCard('dialog_ChargeController')" style="border: none; cursor: pointer; background: none;">
          <div class="ebike-station-charge-controller">
             <span>+&nbsp;-&nbsp;</span><span style="font-size: 10px;">DC</span><br>
          </div>
@@ -2248,8 +2254,8 @@
       <div class="house-outer-wall-floor-lower-RIGHT-wall"></div>
       <img src="images/roof-right.png" class="house-outer-wall-floor-lower-RIGHT-wall-ROOF" title="">
 
-      <img src="images/roof-right.png" class="house-outer-wall-floor-lower-RIGHT-wall-ROOF" 
-         style="margin-left: 1250px; margin-top: -330px; z-index: -20; height: 260px">
+      <!-- <img src="images/roof-right.png" class="house-outer-wall-floor-lower-RIGHT-wall-ROOF" 
+         style="margin-left: 1250px; margin-top: -330px; z-index: -20; height: 260px"> -->
 
    </div>
 

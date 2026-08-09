@@ -159,7 +159,7 @@
    transform: rotate(212deg);
    
    /* Higher z-index ensures it's visually on top of the diagonal wall*/
-   z-index: 250;
+   z-index: 0;
 }
 
 
@@ -1831,20 +1831,13 @@
 <body>
 
 
-   <!-- 2026-07-18: -->
-   <div style="font-family: sans-serif; font-size: 18px; z-index: 1;">
-      <a href="hakka-house-carbonated.html" style="position: fixed; left: 820px;">← east (东dōng) side</a>
-      <a href="hakka-house-side-pond.html" style="position: fixed; left: 1010px;">west (西xī) side →</a>
-   </div>
-
-
    <!-- @@@@@@ 2026-04-08: this is duplicated element on UI b/c the many layers on UI make clicking on the pig scroll not possible -->
-   <div style="border: 2px solid black; font-size: 40px; font-family: sans-serif; cursor: pointer; width: 760px; position: fixed; z-index: 20;">
+   <div style="border: 2px solid black; font-size: 40px; font-family: sans-serif; cursor: pointer; width: 760px; position: fixed; z-index: 20; top: 40px;">
       <span onclick="showDialogCard('dialog_PigPoem')" style="color: springgreen;">
          《安猪曲》
       </span>
 
-      <span onclick="tiltSolarPanel()" id="btnTiltSolarPanel" style="border: none; color: lightskyblue; font-family: sans-serif; font-size: 20px;">tilt 太阳板东西 direction</span>
+      <span onclick="tiltSolarPanel()" id="btnTiltSolarPanel" style="border: none; color: deepskyblue; font-family: sans-serif; font-size: 20px;">tilt 太阳板东西 direction</span>
 
       <span onclick="rotatePanel()" style="border: none; color: darkorange; font-family: sans-serif; font-size: 20px;">ROTATE 太阳板 东 西 direction</span>
    </div>
@@ -2286,6 +2279,12 @@
    </svg>
 
 
+   <!-- 2026-07-18: -->
+    <!-- 2027-08-08: had to move down here since cannot click for some reason if move to the top, must be overlapping elements somewhere -->
+   <div style="font-family: sans-serif; font-size: 18px; z-index: 100; margin-top: -1035px;">
+      <a href="hakka-house-carbonated.html" style="position: fixed; left: 10px;">← east (东dōng) side</a>
+      <a href="hakka-house-side-pond.html" style="position: fixed; left: 190px;">west (西xī) side →</a>
+   </div>
     
 </body>
 </html>

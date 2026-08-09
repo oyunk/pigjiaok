@@ -1592,7 +1592,7 @@
    );
       /* Intense blur creates the glow without changing shape size */
       filter: blur(3px); 
-      animation: swirl 10s linear infinite;
+      animation: swirl 8s linear infinite;
    }
 
    /* Duplicate pseudo-element ensures sharp inner border edge */
@@ -1612,7 +1612,7 @@
          yellowgreen,
          greenyellow
       );
-      animation: swirl 10s linear infinite;
+      animation: swirl 8s linear infinite;
    }
 
    /* Swirl animation (constant rotation only) */
@@ -2253,9 +2253,9 @@
 <body>
 
    <!-- 2026-07-18: -->
-   <div style="font-family: sans-serif; font-size: 18px;">
-      <a href="hakka-house-ebike.html" style="position: fixed; left: 860px;">← south (南nán) side</a>
-      <a href="hakka-house-vending.html" style="position: fixed; left: 1050px;">north (北běi) side →</a>
+   <div style="font-family: sans-serif; font-size: 18px; z-index: 10;">
+      <a href="hakka-house-ebike.html" style="position: fixed; left: 10px;">← south (南nán) side</a>
+      <a href="hakka-house-vending.html" style="position: fixed; left: 190px;">north (北běi) side →</a>
    </div>
 
    <!-- 2026-06-18: chatgpt: asking it to replicate my maizy pig head logo -->
@@ -2387,21 +2387,29 @@
    </span>
 
    <dialog id="dialog_EvaporationFloat" title="evaporation float" style="font-family: sans-serif; font-size: 18px; width: 700px;">
-      This float🛶 helps optimize solar🌞 evaporation by evaporating only the surface layer of the water of the solar still ! It helps insulate the bulk water💧 below and reducing the water thickness to be heated.<br>
+      This float helps optimize solar🌞 evaporation by evaporating only the surface layer of the water of the solar still ! <br>It helps insulate the bulk water💧 below and reducing the water thickness to be heated.<br><br>
+
+      How it works?<br>
 
       <ul>
          <li><b>Top layer : </b>A hydrophobic, porous layer allows water vapour to escape efficiently while heat loss is minimized</li>
          <br>
          <li><b>Bottom layer : </b>A hydrophillic, porous material pulls water up, ensuing a constant, thin supply of salt water🧂🌊 to the hot upper layer</li>
          <br>
-         <li><b>Effect : </b>Salt ions are forced to remain in the bulk water or precipitate only on the edges, rather than blocking the porous structure.</li>
       </ul>
+
+      <b>Effect : </b>Salt ions are forced to stay in the bulk water below or precipitate only on the edges. This prevents it from blocking the porous structure.
+      <br><br>
       
       This allows the water to evaporate faster!
 
       <br><br>
       <button onclick="closeDialog(event)">x</button>
    </dialog>
+
+
+   <!-- 2026-08-08: adapted from Shenzhen's sponge city -->
+    <span style="position: absolute; font-family: sans-serif; font-size: 14px; left: 50px; top: 650px;">pervious concrete</span>
 
    <!-- 2026-06-18: added -->
    <div class="ground-level"></div>
@@ -2474,9 +2482,17 @@
    <div class="side-roof-solar-panel panel2"></div>
    <div class="side-roof-solar-panel panel3"></div>
 
-   <span style="position: absolute; left: 120px; top: 345px; font-family: sans-serif; color: orangered; cursor: pointer; z-index: 5;" class="ui-label-card">
+   <span onclick="showDialogCard('dialog_FruitVegElectrolysisCell')" style="position: absolute; left: 120px; top: 345px; font-family: sans-serif; color: orangered; cursor: pointer; z-index: 5;" class="ui-label-card">
    fruit (shuǐguǒ 水果) /<br>vegetable (shūcài 蔬菜)<br>electrolysis cell
    </span>
+
+      <dialog id="dialog_FruitVegElectrolysisCell" title="evaporation float" style="font-family: sans-serif; font-size: 18px; width: 700px;">
+      
+         explanation to come !
+
+      <br><br>
+      <button onclick="closeDialog(event)">x</button>
+   </dialog>
 
    <div class="lanturn-base base-left">
 

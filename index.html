@@ -17,13 +17,13 @@
 
    /* 2026-07-18: */
    .welcome-label {
-      position: absolute;
+      /* position: absolute; */
       background-color: darkorange;
       color: white;
-      padding: 15px;
+      padding: 14px;
       border-radius: 6px;
       /* max-width: 300px; */
-      width: 220px;
+      width: 230px;
       height: 65px;
       font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
       text-align: center;
@@ -31,14 +31,20 @@
       cursor: pointer;
    }
 
+   /* 2026-08-08: */
+   .welcome-label:hover {
+      transform: translateY(-2px) scale(1.01); /* Lifts up 2px and grows by 1% */
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15); /* Deepens shadow for depth */
+      cursor: pointer;
+   }
+
    .welcome-label2 {
-      position: absolute;
-      top: 190px;
-      background-color: lightblue;
+      /* background-color: lightblue; */
+      background-color: lightgrey;
       color: white;
-      padding: 15px;
+      padding: 14px;
       border-radius: 6px;
-      width: 220px;
+      width: 230px;
       height: 45px;
       /* max-width: 300px; */
       font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
@@ -47,14 +53,13 @@
    }
 
    .welcome-label3 {
-      position: absolute;
-      top: 285px;
       background: white;
-      background-color: thistle;
+      /* background-color: thistle; */
+      background-color: lightgrey;
       color: white;;
-      padding: 15px;
+      padding: 14px;
       border-radius: 6px;
-      width: 220px;
+      width: 230px;
       height: 45px;
       /* max-width: 300px; */
       font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
@@ -71,8 +76,19 @@
 </head>
 <body>
 
-   <h2>o i n k. 李大粟米子猪家屋。</h2>
-   <!-- 2026-07-18: -->
+   <!-- <h2>o i n k. 李大粟米子猪家屋。</h2> -->
+   <h2>o i n k. 欢迎 welcome<br>来我的猪家屋。</h2>
+
+   <div onclick="toggleDiv('aboutPig')" style="cursor: pointer; color: red; margin-bottom: 0.5em; ">Where is my home?</div>
+
+   <div id="aboutPig" style="display: none; word-wrap: break-word; word-break: break-word; overflow-wrap: break-word;">
+      <img src="google_map_shenzhen_hongkong.png" style="width: 500px;" title="shenzhen">
+
+      <br>
+      Just over a decade before the new millennium a wee piglet named Piggy 李大豬 lived in the humble "Cornet" fields of Futian 福田, Shenzhen 深圳, China 中国. One day new concrete buildings forced Piggy from its home, marking the beginning of a journey both long and surprisingly short 🐽. In just <a href="https://www.youtube.com/watch?v=S_UYIOkpves&list=LL&index=20&t=6s&pp=gAQBiAQB">four decades</a> Futian has transformed into a bustling <a href="https://www.youtube.com/watch?v=GiN1lX3fiCc">global tech hub</a>, almost unrecognizable from its former self. Piggy was saddened to see the change, but it never forgot its roots🌽. With the spirit of a true Made in China 🇨 🇳 pioneer pig, Piggy is now on a mission to bring its love of sustainable snacking to the buzz of modern city life. Its ultimate goal? To rekindle the joy and spirit of the "fields for cultivating happiness" in 福田 and beyond, one seed-bit at a time (V −(●●)−V)๑ ☆ﾟ.*･｡ﾟ🌱🌽🌽 <code>制造一月-三月'23-26</code>
+   </div>
+
+   <!-- added 2026-07-18, updated 2026-08-08: -->
    <div class="welcome-label">
       <!-- color: inherit;: Keeps original text colors instead of turning the text blue. -->
       <a href="hakka-house-vending.html" style="text-decoration: none; color: inherit;">
@@ -80,16 +96,19 @@
       </a>
    </div>
 
+   <br>
    <div class="welcome-label2">
-      猪小吃售货机<br>Pig Snack Shop Vending
+      猪农场自动售货机<br>Pig Vertical Farm Vending Shop
    </div>
 
+   <br>
    <div class="welcome-label3">
       猪泥净水器<br>Pig Mud Filter
    </div>
 
-   <div style="margin-top: 320px; font-size: 12px; font-weight: bold;">大猪 '23-26</div>
-
+   <br>
+   <div style="font-size: 12px; font-weight: bold;">大猪 '23-26</div>
+   
     
 </body>
 </html>

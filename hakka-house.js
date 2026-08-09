@@ -220,3 +220,14 @@ function showCompostSpeechBubble(){
       console.error("#mySpeechBubble not found");
    }
 }
+
+
+//2026-08-08: for home landing page about
+function toggleDiv(myID) {
+   let x = document.getElementById(myID);
+   if (x.style.display === "none") {
+      x.style.display = "block";
+   } else {
+      x.style.display = "none";
+   }
+} 

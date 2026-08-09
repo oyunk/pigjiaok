@@ -464,7 +464,7 @@
          border-radius: .4em;
          color: white;
          padding: 15px;
-         max-width: 300px;
+         width: 300px;
          min-height: 50px;
          font-family: sans-serif;
          margin: 50px auto;
@@ -518,6 +518,8 @@
       /* 2026-07-11: The Speech Bubble Container for INTRO */
       .speech-bubble-intro {
          position: absolute;
+         top: 40px;
+         left: 110px;
          background: #007aff;
          color: white;
          padding: 15px 20px;
@@ -525,6 +527,7 @@
          max-width: 280px;
          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         z-index: 0;
       }
 
       /* The Speech Bubble Tail/Arrow */
@@ -692,9 +695,9 @@
       /* 2026-07-12: */
       .roof-right{
          position: absolute;
-         left: 580px;
-         top: 120px;
-         width: 850px;
+         left: 780px;
+         top: 160px;
+         width: 650px;
          height: 10px;
          background-color: grey;
          transform: rotate(21deg);
@@ -704,7 +707,7 @@
 
       .roof-solar-panel{
          position: absolute;
-         left: 100px;
+         left: 50px;
          top: -15px;
          width: 200px;
          height: 10px;
@@ -717,7 +720,7 @@
       /* 2026-07-13 */
       .roof-skylight{
          position: absolute;
-         left: 350px;
+         left: 270px;
          top: -10px;
          width: 200px;
          height: 18px;
@@ -742,6 +745,42 @@
          transform-origin: center; /* Ensures it rotates around its middle */
          z-index: -2;
       }
+
+      /* ======================== LEFT ROOF =============================== */
+      /* 2026-08-08: */
+      .roof-left{
+         position: absolute;
+         left: 50px;
+         top: 10px;
+         display: inline-block; /* Required for transforms to work on inline elements */
+         transform: rotate(-13deg);
+         width: 350px;
+         height: 10px;
+         background-color:grey;
+         z-index: -1;
+      }
+
+      /* 2026-08-08: */
+      .roof-left-wall {
+         position: absolute;
+         left: 795px;
+         top: 5px;
+         display: inline-block; /* Required for transforms to work on inline elements */
+         /* 8px total width */
+         width: 8px;
+         height: 50px;
+         margin: 0 auto;
+         
+         /* Stacked components with thicker black lines */
+         background: 
+            /* Left vertical line (2px wide, 20px tall) */
+            linear-gradient(to right, #000 2px, transparent 2px) no-repeat 1px 0 / 2px 20px,
+            /* Right vertical line (2px wide, 20px tall) */
+            linear-gradient(to right, #000 2px, transparent 2px) no-repeat 5px 0 / 2px 20px,
+            /* Solid grey bottom rectangle (starts exactly at 20px down) */
+            linear-gradient(to bottom, #808080, #808080) no-repeat 0 20px / 100% calc(100% - 20px);
+      }
+
 
       /* ======================== RIGHT SIDE WALL =============================== */
 
@@ -798,10 +837,10 @@
       /* Deep, uniform inset shadow on all four sides */
       .recessed-square-wall {
          position: absolute;
-         top: -10px;
+         top: 0px;
          left: 75px;
          width: 430px;
-         height: 380px;
+         height: 360px;
          background-color: #ffffff;
          /* background-color: transparent; */
          border-radius: 2px;
@@ -1268,7 +1307,7 @@
       /* Base Sign Layout */
       .road-sign {
          position: absolute;
-         left: 1450px;
+         left: 1390px;
          display: flex;
          align-items: center;
          background-color: lightskyblue;
@@ -1284,8 +1323,8 @@
       }
 
       /* Stacking Positions */
-      .sign-top { top: 500px; }
-      .sign-bottom { top: 580px; }
+      .sign-top { top: 520px; }
+      .sign-bottom { top: 600px; }
 
       /* Text Styling */
       .road-text-container {
@@ -1369,8 +1408,8 @@
 
    <!-- 2026-07-18: -->
    <div style="font-family: sans-serif; font-size: 18px;">
-      <a href="hakka-house-vending.html" style="position: fixed; left: 900px;">← north (北běi) side</a>
-      <a href="hakka-house-ebike.html" style="position: fixed; left: 1130px;">south (南nán) side →</a>
+      <a href="hakka-house-vending.html" style="position: fixed; left: 10px;">← north (北běi) side</a>
+      <a href="hakka-house-ebike.html" style="position: fixed; left: 210px;">south (南nán) side →</a>
    </div>
 
    <div class="carbonated-ground-level"></div>
@@ -1381,11 +1420,11 @@
    </div>
 
    <div class="speech-bubble-compost" id="speechBubbleCompost">
-      <span class="sentence-compost">Hello! I am the Compost Pig, 堆肥猪 Duīféi Zhū!</span>
-      <span class="sentence-compost">I love to go around sniffing out leftover fruits and vegetables (水果和蔬菜 shuǐguǒ hé shūcài)!</span>
-      <span class="sentence-compost">If the food scrap has a certain level of water💧 (水 shuǐ) content, I gobble them up!</span>
-      <span class="sentence-compost">Tiny helpful bugs and microbes break them down into rich, healthy soil.</span>
-      <span class="sentence-compost"> If I cannot find enough food scraps to eat, my bamboo leaves will curl up and turn brown!</span>
+      <span class="sentence-compost">Hello ! I am the Compost Pig, 堆肥猪 Duīféi Zhū !</span>
+      <span class="sentence-compost">I like to go around sniffing out leftover fruits and vegetables (水果和蔬菜 shuǐguǒ hé shūcài) !</span>
+      <span class="sentence-compost">If the food scrap has a certain level of water💧 (水 shuǐ) content, I gobble them up !</span>
+      <span class="sentence-compost">Tiny bugs and microbes break the food scraps down into rich, healthy soil.</span>
+      <span class="sentence-compost"> If I cannot find enough food scraps to eat, my bamboo leaves will curl up and turn brown !</span>
    </div>
    
    <div class="bamboo-bin-container" onclick="showCompostSpeechBubble()">
@@ -1473,6 +1512,8 @@
    </div>
 
 
+   <div class="roof-left"></div>
+   <div class="roof-left-wall"></div>
    <div class="roof-right">
       <div class="roof-solar-panel"></div>
       <div class="roof-skylight"></div>

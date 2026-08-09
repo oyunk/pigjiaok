@@ -222,12 +222,29 @@ function showCompostSpeechBubble(){
 }
 
 
-//2026-08-08: for home landing page about
-function toggleDiv(myID) {
+//2026-08-08: gemini: for home landing page about
+function toggleDiv(event, myID) {
    let x = document.getElementById(myID);
-   if (x.style.display === "none") {
+   
+   // Find the chevron element inside the clicked header
+   let chevron = event.currentTarget.querySelector('.chevron');
+   
+   if (x.style.display === "none" || x.style.display === "") {
       x.style.display = "block";
+      
+      // Flip chevron up
+      if (chevron) {
+         chevron.classList.remove('bottom');
+         chevron.classList.add('top');
+      }
    } else {
       x.style.display = "none";
+      
+      // Flip chevron down
+      if (chevron) {
+         chevron.classList.remove('top');
+         chevron.classList.add('bottom');
+      }
    }
-} 
+}
+

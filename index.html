@@ -72,6 +72,28 @@
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
    }
 
+   /* 2026-08-08 */
+   .chevron {
+      display: inline-block;
+      border-style: solid;
+      border-width: 3px 3px 0 0; 
+      height: 12px;              
+      width: 12px;               
+      color: red; /* Changed to red to match your text color text */
+      transition: transform 0.6s ease; /* Adds smooth flip animation */
+   }
+
+   /* Default state: Pointing down */
+   .chevron.bottom {
+      transform: rotate(135deg);
+   }
+
+   /* Expanded state: Pointing up */
+   .chevron.top {
+      transform: rotate(-45deg);
+   }
+
+
    </style>
 </head>
 <body>
@@ -79,7 +101,9 @@
    <!-- <h2>o i n k. 李大粟米子猪家屋。</h2> -->
    <h2>o i n k. 欢迎 welcome<br>来我的猪家屋。</h2>
 
-   <div onclick="toggleDiv('aboutPig')" style="cursor: pointer; color: red; margin-bottom: 0.5em; ">Where is my home?</div>
+   <div onclick="toggleDiv(event, 'aboutPig')" style="cursor: pointer; color: red; margin-bottom: 0.5em;">
+      Where is my home? <span class="chevron bottom"></span>
+   </div>
 
    <div id="aboutPig" style="display: none; word-wrap: break-word; word-break: break-word; overflow-wrap: break-word;">
       <img src="google_map_shenzhen_hongkong.png" style="width: 500px;" title="shenzhen">

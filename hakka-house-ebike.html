@@ -1508,13 +1508,12 @@
 
 .shrine-tablet{
    position: absolute;
-   margin-left: 120px; 
-   margin-top: 30px;
+   left: 600px; 
+   top: 680px;
    background-color: orange;
    font-family: sans-serif;
    padding: 6px; 
    padding-top:2px;
-
    z-index: 1;
 }
 
@@ -1879,6 +1878,17 @@
 
    <!-- 2026-04-08 -->
    <dialog id="dialog_PigHistory">
+      <div style="font-family: sans-serif; width: 500px;">
+      <i>Text: 
+      福田客家 Futian Hakka<br>
+      豬家亙古 Pig Family Time Immemorial<br>
+      土生土长 Born in the soil, grown in the soil
+      </i>
+      <br><br>
+      <i>Description:</i>
+      Pigs have been the backbone of the family in China since the beginning of civilization. This was depicted in the character for family (jiā/ga1, 家) where a pig (shǐ/ci2, 豕) is shown underneath a roof or a house (mián/min4, 宀). 
+      <br>The character was first carved on oracle bones during the Shang Dynasty 3000 years ago. The character evolved into bronze inscriptions during the Zhou dynasty before being standardized into seal and clerical scripts in later eras.
+      </div>
       <img src="images/pig-character-family-hanzi.jpg" title="history of family HANZI" style="max-width:100%;">
       <button onclick="closeDialog(event)">x</button>
    </dialog>
@@ -1990,6 +2000,15 @@
       </div>
 
 
+      <!-- // 2026-04-08: -->
+      <!-- 2026-08-12: #### had to move it here to be clickable due to overlapping elements on UI ### -->
+      <div class="shrine-tablet">
+         <button onclick="showDialogCard('dialog_PigHistory')" style="border: none; background-color: orange;">
+            <span style="font-size: 40px; cursor: pointer;">豬<br> 
+            家</span><br>
+            <span style="font-size: 15px;">-亙古-</span>
+         </button>
+      </div>
 
       <div class="vertical-farm-container-EBIKE">
 
@@ -2105,13 +2124,13 @@
 
          <!-- @@@@@@@@@@@  B u t t o n !! @@@@@@@@@@@@@@ -->
           <!-- // 2026-04-08: -->
-         <div class="shrine-tablet">
+         <!-- <div class="shrine-tablet">
             <button onclick="showDialogCard('dialog_PigHistory')" style="border: none; background-color: orange; ">
                <span style="font-size: 40px; cursor: pointer;">豬<br> 
                家</span><br>
                <span style="font-size: 15px;">-亙古-</span>
             </button>
-         </div>
+         </div> -->
 
          <div class="shrine-stone-base-pedestal"></div>
          <div class="shrine-stone-base"></div>

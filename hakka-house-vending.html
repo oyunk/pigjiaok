@@ -32,6 +32,21 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
    }
 
+   /* 2026-08-12: Make the link fill the entire div */
+   .home-label a {
+      display: block;
+      height: 100%;
+      text-decoration: none;
+      color: inherit;
+   }
+
+   /* 2026-08-08: */
+   .home-label:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+   }
+
    /* ================ HOUSE + COURTYARD OUTLINE ======================= */
    /* 2026-03-14 created */ 
    /* .house-outer-wall-floor-lower{
@@ -546,7 +561,7 @@
    border: 2px solid lightgrey;
    border-radius: 5px;
    font-family: Verdana, Geneva, Tahoma, sans-serif;
-   font-size: 15px;
+   font-size: 16px;
    text-align: center;
    align-items: center;
 
@@ -556,6 +571,10 @@
   
    /* Initial subtle shadow */
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.vending-square-grid span{
+   font-size: 12px;
 }
 
 .vending-square-grid div:hover {
@@ -2378,9 +2397,21 @@
                
                <div class="vending-square-grid">
                   <!-- 9 squares -->
-                  <div>🦐🌽<br>包子</div>   <div>🍊<br>豆腐<br>派</div>   <div>🍉<br>汽水</div>
+                  <!-- <div>🦐🌽<br>包子</div>   <div>🍊<br>豆腐<br>派</div>   <div>🍉<br>汽水</div>
                   <div>🥔<br>包子</div>          <div>💩<br>派</div>   <div>🌽<br>汁</div>
-                  <div>🥬🫜<br>包子</div>     <div>🍓<br>山楂<br>派</div>   <div>💩<br>珍珠<br>奶茶</div>
+                  <div>🥬🫜<br>包子</div>     <div>🍓<br>山楂<br>派</div>   <div>💩<br>珍珠<br>奶茶</div> -->
+
+                  <div>🦐🌽<span>shrimp+<br>corn</span></div>   
+                  <div>🍊<br><span>orange<br>橙子</span></div>   
+                  <div>🍉<br><span>pop<br>汽水</span></div>
+
+                  <div>🥔<br><span>sweet<br>potato</span></div>
+                  <div>💩<br><span>mud<br>派</span></div>
+                  <div>🌽<br><span>juice<br>汁</span></div>
+
+                  <div>🥬🫜<span>cabbage+<br>radish</span></div>
+                  <div>🍓<br><span>hawberry<br>山楂</span></div>
+                  <div>💩<br><span>bubble<br>milk tea</span></div>
                </div>
                <div class="vending-bottom-bar"></div>
             </div>

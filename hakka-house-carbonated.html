@@ -573,31 +573,50 @@
       /* =================================   CARBONATED WATER TANK =============================  */
       
       /* 2026-07-11: gemini: Container representing the liquid */
-      .carbonated-glass {
+      /* 2026-08-31: updated */
+      .carbonated-glass-frame {
          position: absolute;
          top: 390px;
-         left: 830px;
-         width: 170px;
-         height: 340px;
+         left: 810px;
+         width: 180px;
+         height: 310px;
          
          /* Semi-transparent glass tint with a subtle blur */
          background: rgba(224, 242, 241, 0.4); 
          backdrop-filter: blur(8px);
          -webkit-backdrop-filter: blur(8px);
 
-         /* Translucent greenyellow border for a glowing glass edge */
-         border: 4px solid rgba(173, 255, 47, 0.7); 
+         /* Thick, solid matte white border on all 4 sides */
+         border: 20px solid #ffffff; 
          
-         /* Inset shadows create the "recessed wall cavity" depth */
+         /* Uniform 3D Pop-Out & Cavity Shadow Stack */
          box-shadow: 
-            inset 5px 5px 12px rgba(0, 0, 0, 0.4),    /* Deep top/left shadow from the wall cutout */
-            inset -2px -2px 6px rgba(0, 0, 0, 0.2),   /* Softer bottom/right shadow inside the cavity */
-            0 1px 0 rgba(255, 255, 255, 0.2);         /* Tiny highlight on the bottom outer wall edge */
+            /* 1. Sharp Outer Matte Shadow: Ambient occlusion where the white block lifts off the screen */
+            0px 0px 6px 1px rgba(0, 0, 0, 0.35),
+            
+            /* 2. Soft Outer Matte Shadow: Distributes a smooth, non-shiny depth evenly on all 4 sides */
+            0px 0px 20px 4px rgba(0, 0, 0, 0.2),
 
-         border-radius: 0 0 12px 12px; 
+         /* 3. Crisp Inner Frame Crease: Keeps the solid white border sharply defined against the inner content */
+         inset 0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+         
+         /* Your original deep top/left shadow from the wall cutout */
+         inset 5px 5px 12px rgba(0, 0, 0, 0.4),    
+         
+         /* Your original softer bottom/right shadow inside the cavity */
+         inset -2px -2px 6px rgba(0, 0, 0, 0.2),   
+         
+         /* Your original tiny highlight on the bottom outer wall edge */
+         0 1px 0 rgba(255, 255, 255, 0.2);         
+
+         border-radius: 0 0 15px 15px; 
          overflow: hidden;
          z-index: 0;
+         
+         /* Keeps the internal background color and blur inside the matte frame boundaries */
+         background-clip: padding-box; 
       }
+
 
       
 
@@ -835,20 +854,109 @@
       /* ========================== RECESSED WALL TOP FLOOR ======================= */
       
       /* Deep, uniform inset shadow on all four sides */
+
+      /* 2026-08-31: updated */
       .recessed-square-wall {
          position: absolute;
-         top: 0px;
-         left: 75px;
+         top: -30px;
+         left: 40px;
          width: 430px;
          height: 360px;
          background-color: #ffffff;
          /* background-color: transparent; */
          border-radius: 2px;
          /* Deep, uniform inset shadow + extra dark, larger top shadow */
+     
+         /* Pure white 20px border on all 4 sides */
+         border: 25px solid #ffffff; 
+         
+         /* 3D Extrusion Shadows */
          box-shadow: 
-            inset 0px 12px 20px 2px rgba(0, 0, 0, 0.45), /* Heavy, large top shadow */
-            inset 0px 0px 15px 5px rgba(0, 0, 0, 0.25);  /* Your original uniform shadow */
+            /* 1. Ambient Occlusion: The dark, sharp crease right where the frame meets the wall */
+            0px 2px 5px rgba(0, 0, 0, 0.3),
+            
+            /* 2. Mid Shadow: Creates the physical distance/height coming out of the screen */
+            0px 15px 25px rgba(0, 0, 0, 0.25),
+            
+            /* 3. Soft Floor Shadow: The blurry shadow cast far away by ambient overhead lighting */
+            0px 30px 50px rgba(0, 0, 0, 0.2),
+            
+            /* 4. Inside Bevel Shadow: Gives the inside rim of the white frame an edge highlight */
+            inset 0px 0px 0px 1px rgba(0, 0, 0, 0.05),
+            
+            /* 5. Your original deep cavity shadows inside the hollow middle */
+            inset 0px 12px 20px 2px rgba(0, 0, 0, 0.25), 
+            inset 0px 0px 15px 5px rgba(0, 0, 0, 0.25);
+            
+         /* Keeps the center crisp and blocks any background leakage */
+         background-clip: padding-box;
+         
       }
+
+
+      /* 2026-08-31: */
+      /* Main Door Structure (Scaled Down) */
+      .door-patio {
+         position: absolute;
+         top: -105px;
+         left: 305px;
+         width: 120px;
+         height: 520px;
+         background-color: #a05a0c; /* Darker wood color */
+         padding: 22px 16px;
+         display: flex;
+         flex-direction: column;
+         gap: 12px;
+         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+         transform: scale(0.63);
+
+         z-index: 5;
+      }
+
+      /* Top Lattice Window Panel */
+      .door-patio-lattice-window {
+         flex: 2.2;
+         background-color: #ffffff;
+         border: 8px solid #a05a0c; /* Matches darker wood color */
+         outline: 4px solid #7a4103;  /* Darker border accent */
+         position: relative;
+         
+         display: grid;
+         grid-template-columns: repeat(8, 1fr);
+         grid-template-rows: repeat(9, 1fr);
+
+         /* Combined vertical lines and the updated lower horizontal line */
+         background-image: 
+            /* 1. Horizontal line shifted lower (from 85% to 92%) */
+            linear-gradient(to bottom, transparent calc(92% - 2px), #7a4103 calc(92% - 2px), #7a4103 calc(92% + 2px), transparent calc(92% + 2px)),
+            
+            /* 2. Existing 7 vertical lines updated to match new dark border */
+            linear-gradient(to right, 
+                  transparent calc(12.5% - 2px), #7a4103 calc(12.5% - 2px), #7a4103 calc(12.5% + 2px), transparent calc(12.5% + 2px),
+                  transparent calc(25% - 2px),   #7a4103 calc(25% - 2px),   #7a4103 calc(25% + 2px),   transparent calc(25% + 2px),
+                  transparent calc(37.5% - 2px), #7a4103 calc(37.5% - 2px), #7a4103 calc(37.5% + 2px), transparent calc(37.5% + 2px),
+                  transparent calc(50% - 2px),   #7a4103 calc(50% - 2px),   #7a4103 calc(50% + 2px),   transparent calc(50% + 2px),
+                  transparent calc(62.5% - 2px), #7a4103 calc(62.5% - 2px), #7a4103 calc(62.5% + 2px), transparent calc(62.5% + 2px),
+                  transparent calc(75% - 2px),   #7a4103 calc(75% - 2px),   #7a4103 calc(75% + 2px),   transparent calc(75% + 2px),
+                  transparent calc(87.5% - 2px), #7a4103 calc(87.5% - 2px), #7a4103 calc(87.5% + 2px), transparent calc(87.5% + 2px)
+            );
+      }
+
+      /* Bottom Solid Panels */
+      .door-patio-panel-medium {
+         flex: 0.4;
+         border: 4px solid #7a4103;  /* Darker border accent */
+         background-color: #a05a0c; /* Darker wood color */
+      }
+
+      .door-patio-panel-large {
+         flex: 1;
+         border: 4px solid #7a4103;  /* Darker border accent */
+         background-color: #a05a0c; /* Darker wood color */
+      }
+
+
 
       /* ======================= SMALL BRICK WALL ========================= */
       /* 2026-07-12: gemini */
@@ -893,7 +1001,7 @@
       /* ==================== RAIL FENCE ================== */
       .railing-container {
          position: absolute;
-         /* top: 100px; */
+         top: -10px;
          left: 470px;
          width: 420px;
          height: 150px;
@@ -1482,7 +1590,7 @@
 
    </div>
 
-   <div class="carbonated-glass">
+   <div class="carbonated-glass-frame">
       <!-- Regular Bubbles -->
       <div class="carbonated-bubble standard b1"></div>
       <div class="carbonated-bubble standard b2"></div>
@@ -1523,11 +1631,23 @@
 
 
       <!-- 2026-07-18: -->
-      <span onclick="openYoutubeShortPopup('https://www.youtube.com/shorts/pxNVgnl1B0k')" style="position: absolute; left: 520px; top: 120px;  font-family: sans-serif; color: orangered; cursor: pointer;" class="ui-label-card">
+      <span onclick="openYoutubeShortPopup('https://www.youtube.com/shorts/pxNVgnl1B0k')" style="position: absolute; left: 535px; top: 120px;  font-family: sans-serif; color: orangered; cursor: pointer;" class="ui-label-card">
       hydroponic<br>(水耕法 shuǐ gēng fǎ)<br>vertical farm
       </span>
 
       <div class="recessed-square-wall">
+
+
+         <div class="door-patio">
+            <!-- Lattice Window with 5x9 pure vertical & horizontal grid lines -->
+            <div class="door-patio-lattice-window"></div>
+
+            <!-- Solid Bottom Panels -->
+            <div class="door-patio-panel-medium"></div>
+            <div class="door-patio-panel-large"></div>
+         </div>
+
+
 
          <div class="railing-container">
             <div class="railing-col"></div>

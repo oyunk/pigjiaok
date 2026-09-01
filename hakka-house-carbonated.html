@@ -617,7 +617,17 @@
          background-clip: padding-box; 
       }
 
-
+      .carbonated-faucet{
+         position: absolute;
+         top: 690px;
+         left: 920px;
+         width: 18px;
+         height: 50px;
+         background-color: grey;
+         border-top-left-radius: 6px;
+         border-top-right-radius: 6px;
+         font-size: 32px;
+      }
       
 
       /* Base bubble styling */
@@ -944,21 +954,39 @@
             );
       }
 
-
-
-
-
       /* Bottom Solid Panels */
       .door-patio-panel-medium {
          flex: 0.4;
-         border: 4px solid #7a4103;  /* Darker border accent */
+         border: 4px solid rgb(81, 38, 7);  /* Darker border accent */
          background-color: #a05a0c; /* Darker wood color */
       }
 
       .door-patio-panel-large {
          flex: 1;
-         border: 4px solid #7a4103;  /* Darker border accent */
+         border: 4px solid rgb(81, 38, 7);  /* Darker border accent */
          background-color: #a05a0c; /* Darker wood color */
+      }
+
+      /* 2026-09-01: diamond paper sign */
+      .diamond-paper-sign {
+         position: absolute;
+         left: 20px;
+         top: 100px;
+         width: 100px;
+         height: 100px;
+         background: linear-gradient(150deg, yellow, orange);
+         
+         /* Coordinates: Top, Right, Bottom, Left */
+         clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+         
+         /* Centering the content inside */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: red;
+         font-family: sans-serif;
+         font-size: 45px;
+         z-index: 5;
       }
 
 
@@ -1214,6 +1242,28 @@
          bottom: 0;
          left: 0;
          z-index: 2; /* Lowest layer */
+      }
+
+      /* 2026-09-01: */
+      .main-door-sign{
+         position: absolute;
+         top: 190px;
+         width: 170px;
+         height: 40px;
+         background: linear-gradient(150deg, yellow, orange);
+         box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+         box-shadow: 
+            inset 0px 0px 0px 2px rgba(255, 255, 200, 0.4), 
+            2px 4px 8px rgba(0, 0, 0, 0.2);
+         
+         /* Centering the content inside */
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         color: red;
+         font-family: sans-serif;
+         font-size: 28px;
+         z-index: 1;
       }
 
 
@@ -1609,7 +1659,9 @@
       <!-- Yellow Flower Bubbles -->
       <div class="carbonated-bubble flower f1"></div>
       <div class="carbonated-bubble flower f2"></div>
+
    </div>
+   <div class="carbonated-faucet"><span style="position: absolute; left: -13px;">⚙️</span></div>
 
    <div class="container-steps">
       <div></div>
@@ -1644,6 +1696,7 @@
 
 
          <div class="door-patio">
+            <div class="diamond-paper-sign">豕</div>
             <!-- Lattice Window with 5x9 pure vertical & horizontal grid lines -->
             <div class="door-patio-lattice-window"></div>
 
@@ -1752,7 +1805,7 @@
          </div>
          <div></div>
          <div>
-            <span style="position: absolute; top: 190px; font-family: sans-serif; font-size: 30px; color: red; text-shadow: 0 0 6px rgba(0, 70, 255, 0.5), 0 0 12px rgba(255, 120, 0, 0.35);">大福大田</span>
+            <span class="main-door-sign">大福大田</span>
          </div>
       </div>
    </div>
@@ -1774,6 +1827,10 @@
    </div>
 
    <div class="door-frame-container">
+      <img src="images/corn-own-line-drawing.jpg" style="width: 150px; height: 180px; position: absolute; left:65px; top: 53px;">
+
+            <img src="images/transparent logo text(1).png" style="width: 80px; position: absolute; left: 110px; top: 53px; filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.25));">
+
       <div class="door-panel door-top"></div>
       <div class="door-panel door-left"></div>
       <div class="door-panel door-right"></div>
@@ -1785,7 +1842,20 @@
    <img src="images/rice-grain.png" style="position:absolute; width:65px; left: 1200px; top: 140px; transform: scaleX(1); z-index: 1;">
    <img src="images/rice-grain.png" style="position:absolute; width:72px; left: 1250px; top: 163px; transform: scaleX(1); z-index: 1;">
    <img src="images/rice-grain.png" style="position:absolute; width:68px; left: 1240px; top: 160px; transform: scaleX(1); z-index: 1;">
-   <img src="images/carrot.png" style="position:absolute; width:55px; left: 1180px; top: 795px; transform: rotate(40deg); z-index: -1;">
+
+
+   <!-- 2026-09-01: -->
+   <span onclick="showDialogCard('dialog_Tuzki')" style="position: absolute; font-family: sans-serif; color: orangered; cursor: pointer; z-index: 5;" class="ui-label-card">
+      <img src="images/carrot.png" style="position:absolute; width:55px; left: 1160px; top: 788px; transform: rotate(40deg); z-index: -1;">
+   </span>
+
+   <dialog id="dialog_Tuzki" style="font-family: sans-serif; font-size: 18px; width: 700px;">
+      <img src="images/1-1.gif" style="width: 130px;">
+      Super fresh and juicy carrot saved for<br>FUTIAN 福田 hometown buddy TUZKI 兔斯基 !<br>... 嗯嗯 ēn ēn (uh-huh).
+      <a href=""></a>
+      <br><br>
+      <button onclick="closeDialog(event)">x</button>
+   </dialog>
 
 
    <img src="images/transparent-small-roof.png" style="position: absolute; width: 580px; height: 70px; top: 380px; left: 1080px; z-index: -2;">

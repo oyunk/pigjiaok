@@ -923,25 +923,25 @@
          position: relative;
          
          display: grid;
-         grid-template-columns: repeat(8, 1fr);
+         grid-template-columns: repeat(6, 1fr);
          grid-template-rows: repeat(9, 1fr);
 
          /* Combined vertical lines and the updated lower horizontal line */
          background-image: 
-            /* 1. Horizontal line shifted lower (from 85% to 92%) */
-            linear-gradient(to bottom, transparent calc(92% - 2px), #7a4103 calc(92% - 2px), #7a4103 calc(92% + 2px), transparent calc(92% + 2px)),
+            /* 1. Horizontal line shifted lower (from 85% to 92%) - Now 6px thick */
+            linear-gradient(to bottom, transparent calc(92% - 3px), #7a4103 calc(92% - 3px), #7a4103 calc(92% + 3px), transparent calc(92% + 3px)),
             
-            /* 2. Existing 7 vertical lines updated to match new dark border */
+            /* 2. 5 vertical lines for a 6-column layout - Now 6px thick */
             linear-gradient(to right, 
-                  transparent calc(12.5% - 2px), #7a4103 calc(12.5% - 2px), #7a4103 calc(12.5% + 2px), transparent calc(12.5% + 2px),
-                  transparent calc(25% - 2px),   #7a4103 calc(25% - 2px),   #7a4103 calc(25% + 2px),   transparent calc(25% + 2px),
-                  transparent calc(37.5% - 2px), #7a4103 calc(37.5% - 2px), #7a4103 calc(37.5% + 2px), transparent calc(37.5% + 2px),
-                  transparent calc(50% - 2px),   #7a4103 calc(50% - 2px),   #7a4103 calc(50% + 2px),   transparent calc(50% + 2px),
-                  transparent calc(62.5% - 2px), #7a4103 calc(62.5% - 2px), #7a4103 calc(62.5% + 2px), transparent calc(62.5% + 2px),
-                  transparent calc(75% - 2px),   #7a4103 calc(75% - 2px),   #7a4103 calc(75% + 2px),   transparent calc(75% + 2px),
-                  transparent calc(87.5% - 2px), #7a4103 calc(87.5% - 2px), #7a4103 calc(87.5% + 2px), transparent calc(87.5% + 2px)
+                  transparent calc(16.67% - 3px), #7a4103 calc(16.67% - 3px), #7a4103 calc(16.67% + 3px), transparent calc(16.67% + 3px),
+                  transparent calc(33.33% - 3px), #7a4103 calc(33.33% - 3px), #7a4103 calc(33.33% + 3px), transparent calc(33.33% + 3px),
+                  transparent calc(50.00% - 3px), #7a4103 calc(50.00% - 3px), #7a4103 calc(50.00% + 3px), transparent calc(50.00% + 3px),
+                  transparent calc(66.67% - 3px), #7a4103 calc(66.67% - 3px), #7a4103 calc(66.67% + 3px), transparent calc(66.67% + 3px),
+                  transparent calc(83.33% - 3px), #7a4103 calc(83.33% - 3px), #7a4103 calc(83.33% + 3px), transparent calc(83.33% + 3px)
             );
       }
+
+
 
       /* Bottom Solid Panels */
       .door-patio-panel-medium {

@@ -926,12 +926,15 @@
          grid-template-columns: repeat(6, 1fr);
          grid-template-rows: repeat(9, 1fr);
 
-         /* Combined vertical lines and the updated lower horizontal line */
+         /* Combined vertical lines, lower horizontal line, and updated upper horizontal line */
          background-image: 
-            /* 1. Horizontal line shifted lower (from 85% to 92%) - Now 6px thick */
+            /* 1. Upper Horizontal Line (shifted higher to 8%) - 6px thick */
+            linear-gradient(to bottom, transparent calc(8% - 3px), #7a4103 calc(8% - 3px), #7a4103 calc(8% + 3px), transparent calc(8% + 3px)),
+
+            /* 2. Lower Horizontal Line (at 92%) - 6px thick */
             linear-gradient(to bottom, transparent calc(92% - 3px), #7a4103 calc(92% - 3px), #7a4103 calc(92% + 3px), transparent calc(92% + 3px)),
             
-            /* 2. 5 vertical lines for a 6-column layout - Now 6px thick */
+            /* 3. 5 vertical lines for a 6-column layout - 6px thick */
             linear-gradient(to right, 
                   transparent calc(16.67% - 3px), #7a4103 calc(16.67% - 3px), #7a4103 calc(16.67% + 3px), transparent calc(16.67% + 3px),
                   transparent calc(33.33% - 3px), #7a4103 calc(33.33% - 3px), #7a4103 calc(33.33% + 3px), transparent calc(33.33% + 3px),
@@ -940,6 +943,8 @@
                   transparent calc(83.33% - 3px), #7a4103 calc(83.33% - 3px), #7a4103 calc(83.33% + 3px), transparent calc(83.33% + 3px)
             );
       }
+
+
 
 
 
